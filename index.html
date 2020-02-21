@@ -1,0 +1,64 @@
+GitHub
+https://github.com/lynseries
+用户名密码：lynseries/lynseries@2019
+
+1、远程库相关：
+    git remote add origin(可修改)  url  例：git remote add origin git@github.com:mybatis/mybatis-3.git
+    git remote -v
+    修改远程地址：git remote set-url origin  https://github.com/mybatis/mybatis-3.git
+    删除远程地址：git remote rm origin
+
+    同步更新fork的远程库代码
+	* 
+git remote add upstream git@github.com:2227324689/gpmall.git
+
+
+	* 
+git fetch upstream
+	* 
+git checkout master
+	* 
+git merge upstream/master
+	* 
+git push
+	* 
+git commit -m "logs"
+
+
+2、git pull=git fetch+git merge
+
+3、git 版本切换
+    查看本地所有的提交记录：git reflog
+    查看提交记录：git log --pretty=oneline
+	* 
+暂存区
+
+
+    回退到commitid版本：git reset --hard [commitid]
+    回退到上一个版本：git reset --hard^
+    撤销暂存区和工作区所有更改：git reset --hard HEAD
+    撤销暂存区和工作区所有更改：git reset --soft HEAD
+	* 
+工作区
+
+
+    工作区撤销更改
+    git checkout . 
+    git checkout --文件名 
+    git restore -- 文件名 
+	* 
+暂存区回退到工作区
+
+
+    git restore --staged 文件名
+
+    git reset --soft 仅仅移动当前Head指针，不会改变工作区和暂存区的内容
+    git reset --mixed 是reset的默认参数,移动head指针，改变暂存区内容，但不会改变工作区
+    git reset --hard  当前head指针、工作区和暂存区内容全部改变  
+
+
+
+
+
+
+        
